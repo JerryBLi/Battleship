@@ -2,6 +2,11 @@ from enum import Enum, auto
 
 
 class BoardValue(Enum):
-    UNVISITED = auto()
-    HIT = auto()
-    MISS = auto()
+    UNOCCUPIED = '-'
+    HIT = 'H'
+    MISS = 'M'
+    CARRIER = 'C'
+    BATTLESHIP = 'B'
+    DESTROYER = 'D'
+    SUBMARINE = 'S'
+    PATROL_BOAT = 'P'

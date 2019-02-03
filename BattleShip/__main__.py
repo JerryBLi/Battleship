@@ -1,9 +1,11 @@
+from BattleShip.GameLogic import Game
 
 
 def main():
-    '''This is the entry point to the Battleship program'''
-    pass
+    """This is the entry point to the Battleship program"""
+    game = Game()
+    game.play()
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     main();
