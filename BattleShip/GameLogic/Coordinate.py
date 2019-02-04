@@ -3,3 +3,5 @@ class Coordinate:
         self.row = row
         self.col = col
 
+    def parseCoordinate(self,row,col):
+        pass

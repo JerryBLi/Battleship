@@ -1,7 +1,7 @@
-from enum import Enum, auto
+from enum import Enum
 
 
-class BoardValue(Enum):
+class BoardValueEnum(Enum):
     UNOCCUPIED = '-'
     HIT = 'H'
     MISS = 'M'

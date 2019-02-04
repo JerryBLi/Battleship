@@ -10,5 +10,6 @@ class Game:
         return False
 
     def play(self):
+
         while not self.game_won():
             pass

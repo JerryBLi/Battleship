@@ -2,23 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b480cfdf-227e-4214-8a69-a6e7650337f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BattleShip/GameLogic/Coordinate.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BattleShip/GameLogic/Game.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BattleShip/GameLogic/Player.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BattleShip/GameLogic/TurnResultEnum.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BattleShip/GamePieces/ShipTypeEnum.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Battleship.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Battleship.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BattleShip/GameLogic/BoardValueEnum.py" beforeDir="false" afterPath="$PROJECT_DIR$/BattleShip/GameLogic/BoardValueEnum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleShip/GameLogic/Coordinate.py" beforeDir="false" afterPath="$PROJECT_DIR$/BattleShip/GameLogic/Coordinate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleShip/GameLogic/Game.py" beforeDir="false" afterPath="$PROJECT_DIR$/BattleShip/GameLogic/Game.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BattleShip/GameLogic/GameBoard.py" beforeDir="false" afterPath="$PROJECT_DIR$/BattleShip/GameLogic/GameBoard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleShip/GamePieces/Battleship.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleShip/GamePieces/Carrier.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleShip/GamePieces/Destroyer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleShip/GamePieces/PatrolBoat.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleShip/GamePieces/Ship.py" beforeDir="false" afterPath="$PROJECT_DIR$/BattleShip/GamePieces/Ship.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleShip/GamePieces/Submarine.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleShip/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/BattleShip/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleShip/GameLogic/Player.py" beforeDir="false" afterPath="$PROJECT_DIR$/BattleShip/GameLogic/Player.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleShip/GamePieces/ShipTypeEnum.py" beforeDir="false" afterPath="$PROJECT_DIR$/BattleShip/GamePieces/ShipTypeEnum.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BattleShip/GamePieces/ShipTypeEnum.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="85">
+              <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -49,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BattleShip/GameLogic/GameBoard.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="425">
+              <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
               </folding>
@@ -61,17 +51,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BattleShip/GameLogic/BoardValueEnum.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+            <state>
+              <caret column="21" selection-start-column="21" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BattleShip/GameLogic/Game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="39" selection-start-column="39" selection-end-column="39" />
+            <state relative-caret-position="255">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -97,17 +87,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BattleShip/GameLogic/Player.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+            <state relative-caret-position="153">
+              <caret line="9" column="46" lean-forward="true" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BattleShip/GameLogic/Coordinate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="119">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -133,15 +126,15 @@
         <option value="$PROJECT_DIR$/BattleShip/GamePieces/PatrolBoat.py" />
         <option value="$PROJECT_DIR$/BattleShip/GamePieces/Submarine.py" />
         <option value="$PROJECT_DIR$/BattleShip/GameLogic/BoardValuesEnum.py" />
-        <option value="$PROJECT_DIR$/BattleShip/GamePieces/ShipTypeEnum.py" />
-        <option value="$PROJECT_DIR$/BattleShip/GameLogic/Coordinate.py" />
         <option value="$PROJECT_DIR$/BattleShip/GameLogic/TurnResultEnum.py" />
         <option value="$PROJECT_DIR$/BattleShip/__main__.py" />
         <option value="$PROJECT_DIR$/BattleShip/GamePieces/Ship.py" />
         <option value="$PROJECT_DIR$/BattleShip/GameLogic/BoardValueEnum.py" />
         <option value="$PROJECT_DIR$/BattleShip/GameLogic/GameBoard.py" />
         <option value="$PROJECT_DIR$/BattleShip/GameLogic/Player.py" />
+        <option value="$PROJECT_DIR$/BattleShip/GamePieces/ShipTypeEnum.py" />
         <option value="$PROJECT_DIR$/BattleShip/GameLogic/Game.py" />
+        <option value="$PROJECT_DIR$/BattleShip/GameLogic/Coordinate.py" />
       </list>
     </option>
   </component>
@@ -203,7 +196,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.GameBoard">
+  <component name="RunManager" selected="Python.Player">
     <configuration name="BoardValueEnum" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Battleship" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -267,8 +260,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Player" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Battleship" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BattleShip/GameLogic" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BattleShip/GameLogic/Player.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Player" />
         <item itemvalue="Python.GameBoard" />
         <item itemvalue="Python.Game" />
         <item itemvalue="Python.BoardValueEnum" />
@@ -298,7 +313,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32932165" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39934355" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -310,6 +325,17 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/BattleShip/GameLogic/GameBoard.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/BattleShip/GamePieces/Carrier.py" />
@@ -324,10 +350,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BattleShip/GameLogic/Coordinate.py">
+    <entry file="file://$PROJECT_DIR$/BattleShip/GameLogic/TurnResultEnum.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BattleShip/GameLogic/BoardValueEnum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -340,22 +373,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BattleShip/GamePieces/ShipTypeEnum.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="85">
+          <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BattleShip/GameLogic/BoardValueEnum.py">
+    <entry file="file://$PROJECT_DIR$/BattleShip/GameLogic/Game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BattleShip/GameLogic/GameBoard.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="425">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
           </folding>
@@ -364,22 +397,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BattleShip/GameLogic/Player.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+        <state relative-caret-position="153">
+          <caret line="9" column="46" lean-forward="true" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BattleShip/GameLogic/TurnResultEnum.py">
+    <entry file="file://$PROJECT_DIR$/BattleShip/GameLogic/Coordinate.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BattleShip/GameLogic/Game.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="39" selection-start-column="39" selection-end-column="39" />
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>

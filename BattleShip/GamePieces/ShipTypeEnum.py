@@ -1,7 +1,7 @@
 from enum import Enum, auto
 
 
-class ShipType(Enum):
+class ShipTypeEnum(Enum):
     CARRIER = auto()
     BATTLESHIP = auto()
     DESTROYER = auto()
