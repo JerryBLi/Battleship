@@ -1,6 +1,4 @@
 from BattleShip.GameLogic.BoardValueEnum import BoardValueEnum
-import string
-import numpy as np
 
 
 class GameBoard:
@@ -16,11 +14,3 @@ class GameBoard:
 
     def init_board(self):
         pass
-
-    def print_board(self):
-        """Prints the game board with the coordiantes"""
-        print('\n'.join([''.join(['{:<4}'.format(item.value if isinstance(item,BoardValueEnum) else item) for item in row]) for row in self.board]))
-
-
-#x = GameBoard()
-#x.print_board()
