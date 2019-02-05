@@ -1,5 +1,5 @@
 from BattleShip.GameLogic import Player
-from BattleShip.GameLogic import BoardValueEnum
+from BattleShip.GameLogic import BoardValue
 
 
 class Game:
@@ -18,5 +18,5 @@ class Game:
     def print_board(self, board):
         """Prints the game board with the coordiantes"""
         print('\n'.join(
-            [''.join(['{:<4}'.format(item.value if isinstance(item, BoardValueEnum) else item) for item in row]) for row in
+            [''.join(['{:<4}'.format(item.value if isinstance(item, BoardValue) else item) for item in row]) for row in
              board]))
