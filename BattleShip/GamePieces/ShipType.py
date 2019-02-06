@@ -1,4 +1,5 @@
 from enum import Enum, auto
+from BattleShip.GameLogic.BoardValue import BoardValueEnum
 
 
 class ShipTypeEnum(Enum):
@@ -29,5 +30,14 @@ class ShipInformation:
         ShipTypeEnum.BATTLESHIP: "Battleship",
         ShipTypeEnum.DESTROYER: "Destroyer",
         ShipTypeEnum.SUBMARINE: "Submarine",
-        ShipTypeEnum.PATROL_BOAT: "Patrol Boat",
+        ShipTypeEnum.PATROL_BOAT: "Patrol Boat"
         }
+
+    boardValue = {
+
+        ShipTypeEnum.CARRIER: BoardValueEnum.CARRIER,
+        ShipTypeEnum.BATTLESHIP: BoardValueEnum.BATTLESHIP,
+        ShipTypeEnum.DESTROYER: BoardValueEnum.DESTROYER,
+        ShipTypeEnum.SUBMARINE: BoardValueEnum.SUBMARINE,
+        ShipTypeEnum.PATROL_BOAT: BoardValueEnum.PATROL_BOAT
+    }

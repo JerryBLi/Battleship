@@ -1,4 +1,5 @@
 from BattleShip.GamePieces.ShipType import ShipDirectionEnum
+from BattleShip.GameLogic.GameBoard import GameBoard
 
 
 class Coordinate:
@@ -22,11 +23,12 @@ class Coordinate:
             return None
 
         # parse the first value
-        row_value = ord(split_coord[0].lower()) - ord('a') + 1
+        col_value = ord(split_coord[0].lower()) - ord('a') + 1
         # parse the second value
-        col_value = ord(split_coord[1]) - ord('1') + 1
+        row_value = ord(split_coord[1]) - ord('1') + 1
         # check if within bounds
-        if row_value <= 0 or col_value <= 0 or row_value >= 11 or col_value >= 11:
+        if row_value < GameBoard.MIN_ROW or col_value < GameBoard.MIN_COL or \
+                row_value > GameBoard.MAX_ROW or col_value > GameBoard.MAX_COL:
             return None
         return Coordinate(row_value, col_value)
 
