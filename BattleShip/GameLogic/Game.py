@@ -21,13 +21,18 @@ class Game:
             return False
 
     def play(self):
-        self.players[0].auto_populate_board()
+        self.players[0].populate_board()
         self.players[1].auto_populate_board()
         current_player = 0
 
         while not self.game_won():
             Game.player_turn(self, current_player)
             current_player = (current_player + 1) % 2
+
+        if self.players[0].player_health == 0:
+            print("Player 1 Won!")
+        else:
+            print("Player 2 Won!")
 
     def player_turn(self, player_num):
         current_player = self.players[player_num]
