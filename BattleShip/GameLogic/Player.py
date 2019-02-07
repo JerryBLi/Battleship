@@ -2,19 +2,22 @@ from BattleShip.GameLogic.GameBoard import GameBoard
 from BattleShip.GameLogic.Coordinate import Coordinate
 from BattleShip.GamePieces.ShipType import ShipTypeEnum
 from BattleShip.GamePieces.ShipType import ShipInformation
+from BattleShip.GamePieces.ShipType import ShipDirectionEnum
 from BattleShip.GamePieces import Ship
 from BattleShip.GameLogic.BoardValue import BoardValueEnum
 from BattleShip.GameLogic.BoardValue import AttackValueEnum
+import random
 
 
 class Player:
     """This is the player representation. This will contain the main logic"""
 
-    def __init__(self):
+    def __init__(self, is_human):
         self.self_map = GameBoard()
         self.enemy_map = GameBoard()
         self.ships = {}
         self.player_health = 0
+        self.is_human = is_human
 
     def populate_board(self):
         """Populate each ship"""
@@ -60,9 +63,31 @@ class Player:
                 if placed:
                     break
 
+    def auto_populate_board(self):
+        ship_directions = (ShipDirectionEnum.VERTICAL, ShipDirectionEnum.HORIZONTAL)
+        for ship in ShipTypeEnum:
+            while True:
+                ship_row = random.randint(GameBoard.MIN_ROW, GameBoard.MAX_ROW)
+                ship_col = random.randint(GameBoard.MIN_COL, GameBoard.MAX_COL)
+                ship_coord = Coordinate(ship_row, ship_col)
+                ship_dir = ship_directions[random.randint(0,1)]
+                new_ship = Ship.Ship(ship_coord.row, ship_coord.col, ship_dir, ship)
+
+                if not self.self_map.place_ship(new_ship):
+                    continue
+                self.ships[ship] = new_ship
+
+                # add ship length value to player health
+                self.player_health += int(ShipInformation.shipLength.get(ship))
+
+                # end the loop, the ship has been placed successfully
+                placed = True
+                if placed:
+                    break
+
     def update_enemy_map(self, coordinate, value):
         if isinstance(coordinate, Coordinate) and isinstance(value, BoardValueEnum):
-            self.enemy_map[coordinate.row][coordinate.col] = value
+            self.enemy_map.board[coordinate.row][coordinate.col] = value
 
     def attack(self, coordinate):
         """Handle enemy attack"""
@@ -71,33 +96,34 @@ class Player:
         # return value
         if isinstance(coordinate, Coordinate):
             # current ship reference if it's a ship
-            if self.self_map[coordinate.row][coordinate.col] == BoardValueEnum.UNOCCUPIED:
-                self.self_map[coordinate.row][coordinate.col] = BoardValueEnum.MISS
-                return AttackValueEnum.MISS
-            elif self.self_map[coordinate.row][coordinate.col] == BoardValueEnum.HIT:
-                return AttackValueEnum.EXISTS
-            elif self.self_map[coordinate.row][coordinate.col] == BoardValueEnum.MISS:
-                return AttackValueEnum.EXISTS
-            elif self.self_map[coordinate.row][coordinate.col] == BoardValueEnum.CARRIER:
+            if self.self_map.board[coordinate.row][coordinate.col] == BoardValueEnum.UNOCCUPIED:
+                self.self_map.board[coordinate.row][coordinate.col] = BoardValueEnum.MISS
+                return AttackValueEnum.MISS, ''
+            elif self.self_map.board[coordinate.row][coordinate.col] == BoardValueEnum.HIT:
+                return AttackValueEnum.EXISTS, ''
+            elif self.self_map.board[coordinate.row][coordinate.col] == BoardValueEnum.MISS:
+                return AttackValueEnum.EXISTS, ''
+            elif self.self_map.board[coordinate.row][coordinate.col] == BoardValueEnum.CARRIER:
                 ship = self.ships[ShipTypeEnum.CARRIER]
-            elif self.self_map[coordinate.row][coordinate.col] == BoardValueEnum.BATTLESHIP:
+            elif self.self_map.board[coordinate.row][coordinate.col] == BoardValueEnum.BATTLESHIP:
                 ship = self.ships[ShipTypeEnum.BATTLESHIP]
-            elif self.self_map[coordinate.row][coordinate.col] == BoardValueEnum.DESTROYER:
+            elif self.self_map.board[coordinate.row][coordinate.col] == BoardValueEnum.DESTROYER:
                 ship = self.ships[ShipTypeEnum.DESTROYER]
-            elif self.self_map[coordinate.row][coordinate.col] == BoardValueEnum.SUBMARINE:
+            elif self.self_map.board[coordinate.row][coordinate.col] == BoardValueEnum.SUBMARINE:
                 ship = self.ships[ShipTypeEnum.SUBMARINE]
-            elif self.self_map[coordinate.row][coordinate.col] == BoardValueEnum.PATROL_BOAT:
+            elif self.self_map.board[coordinate.row][coordinate.col] == BoardValueEnum.PATROL_BOAT:
                 ship = self.ships[ShipTypeEnum.PATROL_BOAT]
             else:
-                return AttackValueEnum.INVALID
+                return AttackValueEnum.INVALID, ''
 
             # A ship is hit, evaluate if it is destroyed or just hit
+            self.player_health -= 1
             ship.ship_health -= 1
-            self.self_map[coordinate.row][coordinate.col] = BoardValueEnum.HIT
+            self.self_map.board[coordinate.row][coordinate.col] = BoardValueEnum.HIT
             if ship.ship_health == 0:
-                return AttackValueEnum.DESTROYED
+                return AttackValueEnum.DESTROYED, ShipInformation.displayName.get(ship.ship_type)
             else:
-                return AttackValueEnum.HIT
+                return AttackValueEnum.HIT, ShipInformation.displayName.get(ship.ship_type)
 
         else:
             return AttackValueEnum.INVALID
@@ -108,7 +134,3 @@ class Player:
             [''.join(['{:<4}'.format(item.value if isinstance(item, BoardValueEnum) else item) for item in row]) for row in
              board]))
 
-
-p = Player()
-p.populate_board()
-Player.print_board(p, p.self_map.board)

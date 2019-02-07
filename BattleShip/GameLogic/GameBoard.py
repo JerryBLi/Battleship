@@ -26,7 +26,7 @@ class GameBoard:
         # check if the ship can be placed
         for i in range(int(ship.length)):
             if current_col < GameBoard.MIN_COL or current_row < GameBoard.MIN_ROW or \
-                    current_row > GameBoard.MAX_ROW or current_col > GameBoard.MAX_COL or \
+                    current_row > GameBoard.MAX_ROW - 1 or current_col > GameBoard.MAX_COL - 1 or \
                     self.board[current_row][current_col] != BoardValueEnum.UNOCCUPIED:
                 return False
             if ship.ship_direction == ShipDirectionEnum.HORIZONTAL:
